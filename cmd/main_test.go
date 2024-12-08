@@ -108,27 +108,27 @@ func TestNormalizeImportPath(t *testing.T) {
 
 	tests := testCaseType{
 		{"linux-path", args{
-			currentModule: "github.com/caddyserver/xcaddy",
+			currentModule: "github.com/13Cohen/xcaddy",
 			cwd:           "/xcaddy",
 			moduleDir:     "/xcaddy",
-		}, "github.com/caddyserver/xcaddy"},
+		}, "github.com/13Cohen/xcaddy"},
 		{"linux-subpath", args{
-			currentModule: "github.com/caddyserver/xcaddy",
+			currentModule: "github.com/13Cohen/xcaddy",
 			cwd:           "/xcaddy/subdir",
 			moduleDir:     "/xcaddy",
-		}, "github.com/caddyserver/xcaddy/subdir"},
+		}, "github.com/13Cohen/xcaddy/subdir"},
 	}
 	windowsTests := testCaseType{
 		{"windows-path", args{
-			currentModule: "github.com/caddyserver/xcaddy",
+			currentModule: "github.com/13Cohen/xcaddy",
 			cwd:           "c:\\xcaddy",
 			moduleDir:     "c:\\xcaddy",
-		}, "github.com/caddyserver/xcaddy"},
+		}, "github.com/13Cohen/xcaddy"},
 		{"windows-subpath", args{
-			currentModule: "github.com/caddyserver/xcaddy",
+			currentModule: "github.com/13Cohen/xcaddy",
 			cwd:           "c:\\xcaddy\\subdir",
 			moduleDir:     "c:\\xcaddy",
-		}, "github.com/caddyserver/xcaddy/subdir"},
+		}, "github.com/13Cohen/xcaddy/subdir"},
 	}
 	if runtime.GOOS == "windows" {
 		tests = append(tests, windowsTests...)
